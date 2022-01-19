@@ -1,0 +1,20 @@
+{
+  "name": "mfe-singlebuild",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "start": "http-server ./dist --port 4301",
+    "deploy": "npm run deploy:prod",
+    "deploy:local": "cross-env DEPLOY_ENV=local node ./script.js",
+    "deploy:prod": "cross-env DEPLOY_ENV=prod node ./script.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "http-server": "^14.1.0",
+    "replace-in-file": "^6.3.2"
+  }
+}
